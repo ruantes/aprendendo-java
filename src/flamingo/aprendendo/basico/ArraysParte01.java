@@ -2,8 +2,7 @@ package flamingo.aprendendo.basico;
 
 public class ArraysParte01 {
     public static void main(String[] args) {
-        int [] idades = new int [4];
-        int contador = 0;
+        int [] idades = new int [5];
         idades [0] =12;
         idades [1] =21;
         idades [2] =23;
