@@ -1,32 +1,21 @@
 package flamingo.aprendendo.Intermediario.test;
 import  flamingo.aprendendo.Intermediario.Dominio.Carro;
+import java.util.Scanner;
 
 public class CarroTest01 {
     public static void main(String[] args) {
-        Carro carro1 = new Carro();
-        Carro carro2 = new Carro();
+        Scanner sc = new Scanner(System.in);
+        Carro carro01 = new Carro();
 
-        carro1.nome = "Civic";
-        carro1.marca = "Honda";
-        carro1.ano = 1999;
+        System.out.println("Digite a marca do carro: ");
+        carro01.marca = sc.nextLine();
 
-        carro2.nome = "Gol";
-        carro2.marca = "Volkswagen";
-        carro2.ano = 2015;
+        System.out.println("Digite o modelo do carro: ");
+        carro01.nome = sc.nextLine();
 
-        System.out.printf(""" 
-                Carro 01
-                nome: %s
-                marca:%s
-                ano: %d
-                
-                ---------------------
-                Carro 02
-                nome: %s
-                marca:%s
-                ano: %d
-                
-                """,carro1.nome, carro1.marca, carro1.ano,carro2.nome,carro2.marca, carro2.ano);
+        System.out.println("Digite a velocidade atual do carro: ");
+        carro01.velocidadeAtual = sc.nextInt();
 
+        System.out.println(carro01.verificarMulta(120));
     }
 }
